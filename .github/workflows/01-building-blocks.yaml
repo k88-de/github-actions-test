@@ -3,7 +3,7 @@ name: 01 - Building Blocks
 
 # Trigger: Run this workflow on every push to any branch
 on:
-  - push
+  push
 
 jobs:
   # Job 1: Simple hello message
