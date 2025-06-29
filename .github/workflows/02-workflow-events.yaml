@@ -3,10 +3,8 @@ name: 02 - Workflow Events
 
 # Trigger: Run this workflow on every push to any branch
 on:
-  push: 
-  pull_request:
-  schedule:
-    - cron: '5 22 * * *' # Runs daily at 22:05 UTC
+  push: # Trigger on pushes
+  pull_request: # Trigger on pull requests
   workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
@@ -15,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest 
     steps: 
       - name: Show the trigger
-        run: echo "Event name ${{ github.event_name}}" # Display the event name that triggered the workflow
+        run: echo "Event name ${{ github.event_name }}" # Display the event name that triggered the workflow
