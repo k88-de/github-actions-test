@@ -1,9 +1,8 @@
 # This workflow demonstrates basic GitHub Actions building blocks
 name: 01 - Building Blocks
 
-# Trigger: Run this workflow on every push to any branch
-on:
-  push
+# Trigger: Allows manual triggering of the workflow
+on: workflow_dispatch
 
 jobs:
   # Job 1: Simple hello message
