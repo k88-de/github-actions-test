@@ -3,7 +3,11 @@ name: 02 - Workflow Events
 
 # Trigger: Run this workflow on every push to any branch
 on:
-  push
+  push: 
+  pull_request:
+  schedule:
+    - cron: '* 20 * * *' # Runs every day at 20:00 UTC
+  workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
   # Job 1: Display the event name
